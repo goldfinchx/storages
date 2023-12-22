@@ -1,0 +1,4 @@
+name: Storages
+version: '1.0.0'
+main: ru.artorium.storages.Storages
+api-version: '1.19'
