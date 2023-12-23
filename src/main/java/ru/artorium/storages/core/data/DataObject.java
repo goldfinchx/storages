@@ -8,7 +8,7 @@ import org.bson.codecs.pojo.annotations.BsonDiscriminator;
 @BsonDiscriminator
 @NoArgsConstructor
 @AllArgsConstructor
-public abstract class Data<I> {
+public abstract class DataObject<I> {
 
     private I id;
 

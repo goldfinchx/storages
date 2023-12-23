@@ -9,9 +9,9 @@ import org.redisson.config.Config;
 public class Redis {
 
     private final RedissonClient client;
-    private static final String URL = "redis://redis-14894.c250.eu-central-1-1.ec2.cloud.redislabs.com:14894/0";
-    private static final String USER = "default";
-    private static final String PASSWORD = "2vfJF4ijU3azjEFqt7tQmyNwMNpCk8G0";
+    private static final String URL = "your redis url";
+    private static final String USER = "user";
+    private static final String PASSWORD = "password";
 
     public Redis() {
         final Config config = new Config();

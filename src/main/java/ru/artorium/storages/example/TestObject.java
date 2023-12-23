@@ -1,15 +1,17 @@
-package ru.artorium.storages.core.player;
+package ru.artorium.storages.example;
 
-import java.util.UUID;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.bson.codecs.pojo.annotations.BsonDiscriminator;
 import ru.artorium.storages.core.data.DataObject;
 
-@lombok.Data
-@BsonDiscriminator
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-public abstract class PlayerData extends DataObject<UUID> {
+@NoArgsConstructor
+@BsonDiscriminator
+public class TestObject extends DataObject<String> {
+
+    private int level;
 
 }

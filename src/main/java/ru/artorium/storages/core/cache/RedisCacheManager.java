@@ -2,12 +2,11 @@ package ru.artorium.storages.core.cache;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.redisson.api.RedissonClient;
 import ru.artorium.storages.Storages;
-import ru.artorium.storages.core.data.Data;
+import ru.artorium.storages.core.data.DataObject;
 
-public class RedisCacheManager<D extends Data<I>, I> implements CacheManager<D, I> {
+public class RedisCacheManager<D extends DataObject<I>, I> implements CacheManager<D, I> {
 
     private final RedissonClient client;
     private final String prefix;

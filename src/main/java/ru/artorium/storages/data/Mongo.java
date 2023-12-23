@@ -15,7 +15,7 @@ public class Mongo {
 
     private final MongoClient client;
 
-    private static final String URL = "mongodb+srv://root:k9f2GJ8gj8GJ8I3to1jk0j0Q3OTqo31-124@green-cluster.gucfufg.mongodb.net";
+    private static final String URL = "your url";
 
     public Mongo() {
         final ConnectionString connectionString = new ConnectionString(URL);

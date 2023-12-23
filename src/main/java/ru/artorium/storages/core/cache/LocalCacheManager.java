@@ -2,9 +2,9 @@ package ru.artorium.storages.core.cache;
 
 import java.util.HashMap;
 import java.util.Map;
-import ru.artorium.storages.core.data.Data;
+import ru.artorium.storages.core.data.DataObject;
 
-public class LocalCacheManager<D extends Data<I>, I> implements CacheManager<D, I> {
+public class LocalCacheManager<D extends DataObject<I>, I> implements CacheManager<D, I> {
 
     private final Map<I, D> cache = new HashMap<>();
 

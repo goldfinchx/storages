@@ -8,13 +8,14 @@ import lombok.experimental.Accessors;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.artorium.storages.core.data.DataManager;
 
+@Setter
 @Accessors(chain = true, fluent = true)
 public abstract class PlayerDataManager<P extends PlayerData> extends DataManager<P, UUID> {
 
-    @Setter private Consumer<P> onCreate = $ -> {};
+    private Consumer<P> onCreate = $ -> {};
 
     public PlayerDataManager(JavaPlugin plugin) {
-        super(plugin, false);
+        super(plugin.getName(), false);
         plugin.getServer().getPluginManager().registerEvents(new PlayerListener(this), plugin);
     }
 
