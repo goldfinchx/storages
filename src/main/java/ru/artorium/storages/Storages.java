@@ -20,16 +20,6 @@ public final class Storages extends JavaPlugin {
         instance = this;
         this.mongo = new Mongo();
         this.redis = new Redis();
-
-        final TestObjectDataManager testObjectDataManager = new TestObjectDataManager(this);
-        testObjectDataManager.load("test"); // load object from storage to cache
-        testObjectDataManager.save("test"); // save object from cache to storage
-        testObjectDataManager.unload("test"); // unload object from cache
-        testObjectDataManager.unloadAll(); // unload all objects from cache
-
-        final TestObject object = testObjectDataManager.get("test"); // get object from cache
-        final Map<String, TestObject> allStoredObjects = testObjectDataManager.getStorage(); // get all objects from storage
-        final Map<String, TestObject> allCachedObjects = testObjectDataManager.getCache(); // get all objects from cache
     }
 
     @Override
